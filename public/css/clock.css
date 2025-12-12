@@ -1,0 +1,38 @@
+#timer,
+.time-section {
+    display: flex;
+    flex-direction: row;
+    height: 40vh;
+}
+@media (max-height: 320px) {
+    #timer,
+    .time-section {
+        height: 80vh;
+    }
+}
+.number-scroll {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 0.5;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.number-scroll-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1000%;
+    position: absolute;
+    top: 0;
+    transition: top .2s ease-out;
+}
+.number-scroll-content span {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}

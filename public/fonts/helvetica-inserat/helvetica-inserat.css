@@ -1,0 +1,9 @@
+/* helvetica-inserat-roman */
+@font-face {
+	font-family: "Helvetica Inserat";
+	font-style: normal;
+	font-weight: 400;
+	font-stretch: 100%;
+	src: local("Helvetica Inserat Roman"), local("HelveticaInserat-Roman"), url(helvetica-inserat-roman.woff2) format("woff2");
+}
+

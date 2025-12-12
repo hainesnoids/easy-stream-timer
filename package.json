@@ -1,0 +1,15 @@
+{
+  "name": "easip-obs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "dependencies": {
+    "express": "^5.1.0",
+    "@wll8/express-ws": "^1.0.6"
+  },
+  "type": "commonjs"
+}

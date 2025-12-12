@@ -1,0 +1,50 @@
+@import url("../fonts/helvetica-inserat/helvetica-inserat.css");
+* {
+    box-sizing: border-box;
+}
+*[hidden] {
+    display: none;
+}
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Helvetica Inserat", Arial, Helvetica, sans-serif;
+}
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main:has(#timer:not(.inactive)) {
+    background: #000;
+}
+#timer {
+    color: #fff;
+    background: #000;
+    font-size: 40vh;
+}
+@media (max-height: 320px) {
+    #timer {
+        font-size: 80vh;
+    }
+}
+#timer * {
+    line-height: 1;
+}
+#timer.ended {
+    animation: pulseRed 1s infinite steps(1);
+}
+#timer.inactive {
+    display: none;
+}
+@keyframes pulseRed {
+    0% {
+        color: #f00;
+    }
+    50% {
+        color: #fff;
+    }
+}
