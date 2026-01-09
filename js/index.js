@@ -23,7 +23,7 @@ function startTimer(len) {
         }
 
         houDOM.textContent = String(hou).padStart(2, '0');
-        minDOM.textContent = String(min).padStart(time < 600 ? 1 : 2, '0');
+        minDOM.textContent = String(min).padStart(2, '0');
         secDOM.textContent = String(sec).padStart(2, '0');
 
         let alarmLoaded = false;
