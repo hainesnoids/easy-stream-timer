@@ -4,6 +4,6 @@
 	font-style: normal;
 	font-weight: 400;
 	font-stretch: 100%;
-	src: local("Subscribe"), url(subscribe.woff2) format("woff2");
+	src: local("Subscribe"), url(Subscribe.woff2) format("woff2");
 }
 
