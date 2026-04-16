@@ -1,0 +1,9 @@
+/* subscribe */
+@font-face {
+	font-family: "Subscribe";
+	font-style: normal;
+	font-weight: 400;
+	font-stretch: 100%;
+	src: local("Subscribe"), url(subscribe.woff2) format("woff2");
+}
+
