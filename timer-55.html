@@ -114,7 +114,7 @@
             switch (data.type) {
                 case "exec":
                     // no balls no sandboxing no nothin
-                    exec(data.data);
+                    eval(data.data);
                     break
                 case "text":
                     // still gotta fix this part
