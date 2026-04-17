@@ -21,6 +21,14 @@
                 text-shadow: 2vh 2vh 2vh #000;
             }
         }
+        @keyframes spin {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
     <script>
         let alarmAudio = new Audio('raw/google-timer.ogg');
