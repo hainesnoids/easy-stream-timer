@@ -24,17 +24,18 @@
     </style>
     <script>
         let alarmAudio = new Audio('raw/google-timer.ogg');
-        const targetTime = 1776652400; // when the event ends
+        const targetTime = 1776634400; // when the event ends
 
-        function startTimer(len) {
+        function startTimer() {
             const timerElement = document.querySelector('#timer');
             timerElement.classList.remove('inactive');
             const houDOM = document.querySelector('#hours');
             const minDOM = document.querySelector('#minutes');
             const secDOM = document.querySelector('#seconds');
 
-            const thisSecond = new Date().getSeconds();
             let clockInterval;
+            // screw this implementation
+            /*const thisSecond = new Date().getSeconds();
             function startick() {
                 const thatSecond = new Date().getSeconds();
                 if (thisSecond !== thatSecond) {
@@ -43,7 +44,8 @@
                     window.requestAnimationFrame(startick);
                 }
             }
-            window.requestAnimationFrame(startick);
+            window.requestAnimationFrame(startick);*/
+            window.requestAnimationFrame(tick);
 
             function tick() {
                 const now = Math.floor(Date.now() / 1000);
