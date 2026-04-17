@@ -77,6 +77,8 @@
                 if (time <= 0) {
                     clearInterval(clockInterval);
                     timerEnded();
+                } else {
+                    window.requestAnimationFrame(tick);
                 }
             }
         }
