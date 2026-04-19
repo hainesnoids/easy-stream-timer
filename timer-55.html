@@ -144,11 +144,11 @@
         function timerEnded() {
             const timerElement = document.querySelector('#timer');
             timerElement.classList.add('ended');
-            alarmAudio.loop = false;
+            //alarmAudio.loop = false;
             alarmAudio.play().then();
             let timerBeepInterval = setInterval(() => {
                 alarmAudio.play().then();
-            },2000);
+            },1200);
             setTimeout(() => { // reset timer after 30 seconds
                 timerElement.classList.remove('ended');
                 alarmAudio.pause();
