@@ -81,7 +81,8 @@
     <script>
         let alarmAudio = new Audio('raw/google-timer.ogg');
         const targetTime = 1776635755; // when the event ends
-        let clockInterval;
+        let clockInterval,
+            tickerCount;
 
         function startTimer() {
             const timerElement = document.querySelector('#timer');
@@ -101,7 +102,7 @@
                 }
             }
             window.requestAnimationFrame(startick);*/
-            window.requestAnimationFrame(tick);
+            tickerCount = window.requestAnimationFrame(tick);
 
             function tick() {
                 const now = Math.floor(Date.now() / 1000);
@@ -131,10 +132,11 @@
                 }
 
                 if (time <= 0) {
-                    clearInterval(clockInterval);
+                    window.cancelAnimationFrame(tickerCount);
+                    //clearInterval(clockInterval);
                     timerEnded();
                 } else {
-                    window.requestAnimationFrame(tick);
+                    tickerCount = window.requestAnimationFrame(tick);
                 }
             }
         }
