@@ -81,6 +81,7 @@
     <script>
         let alarmAudio = new Audio('raw/google-timer.ogg');
         const targetTime = 1776635755; // when the event ends
+        let clockInterval;
 
         function startTimer() {
             const timerElement = document.querySelector('#timer');
@@ -89,7 +90,6 @@
             const minDOM = document.querySelector('#minutes');
             const secDOM = document.querySelector('#seconds');
 
-            let clockInterval;
             // screw this implementation
             /*const thisSecond = new Date().getSeconds();
             function startick() {
