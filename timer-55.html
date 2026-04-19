@@ -30,6 +30,32 @@
                 transform: rotate(360deg);
             }
         }
+        @keyframes fivefive {
+            0% {
+                transform: scale(1.5);
+            }
+            50% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.5);
+            }
+        }
+        .anim-55 {
+            animation: fivefive .5s cubic-bezier(0.65, 0, 0.35, 1) 0s infinite;
+            position: relative;
+        }
+        .anim-55-offset {
+            animation: fivefive .5s cubic-bezier(0.65, 0, 0.35, 1) .25s infinite;
+            position: relative;
+        }
+        #timer {
+            display: flex;
+            flex-direction: row;
+        }
+        #timer span {
+            display: block;
+        }
         .message {
             position: absolute;
             top: 0;
