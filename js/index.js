@@ -12,7 +12,6 @@ function startTimer(len) {
         const hou = Math.floor(time / 3600);
         const min = Math.floor((time % 3600) / 60);
         const sec = time % 60;
-        const showHours = time >= 3600;
 
         if (showHours) {
             houDOM.removeAttribute('hidden');
